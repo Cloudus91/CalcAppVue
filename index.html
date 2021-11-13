@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/6d5f5e1942.js" crossorigin="anonymous"></script>
+    <title>Calc App</title>
+</head>
+
+<body>
+    <!-- Container -->
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">CALC <i class="fab fa-vuejs"></i> APP</h1>
+        <div id="app">
+            <div class="calculator">
+                <div class="screen">{{value || "0"}}</div>
+                <div class="btn operator" @click="clear">C</div>
+                <div class="btn operator" @click="del">DEL</div>
+                <div class="btn operator" @click="calc('%')">%</div>
+                <div class="btn operator" @click="calc('/')">÷</div>
+                <div class="btn" @click="insert(7)">7</div>
+                <div class="btn" @click="insert(8)">8</div>
+                <div class="btn" @click="insert(9)">9</div>
+                <div class="btn operator" @click="calc('*')">x</div>
+                <div class="btn" @click="insert(4)">4</div>
+                <div class="btn" @click="insert(5)">5</div>
+                <div class="btn" @click="insert(6)">6</div>
+                <div class="btn operator" @click="calc('-')">-</div>
+                <div class="btn" @click="insert(1)">1</div>
+                <div class="btn" @click="insert(2)">2</div>
+                <div class="btn" @click="insert(3)">3</div>
+                <div class="btn operator" @click="calc('+')">+</div>
+                <div class="btn" @click="insert(0)">0</div>
+                <div class="btn" @click="changeSign">-/+</div>
+                <div class="btn" @click="convertDecimal">.</div>
+                <div class="btn operator" @click="result">=</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
